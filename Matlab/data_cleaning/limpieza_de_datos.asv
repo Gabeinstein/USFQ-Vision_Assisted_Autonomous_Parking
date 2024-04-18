@@ -1,0 +1,26 @@
+%%% Proyecto Sistemas de Comunicaciones - Primavera 2024
+%%% Gabriel Oña, Jose Montahuano y Emilia Casares
+
+%%% Código para unir los datasets generados desde rosbag(.bag) a un solo
+%%% Dataset (.csv) junto con el valor esperado y la correccion de (inf -> 0)
+
+%%% ------- En la Red Neuronal --------
+
+Retro = readmatrix("datasets\diagonal\dataset_diagonal.csv");
+Paralelo = readmatrix("datasets\paralelo\dataset_paralelo.csv");
+Diagonal = readmatrix("datasets\diagonal\dataset_diagonal.csv");
+Frente = readmatrix("datasets\frente\dataset_frente.csv");
+
+Retro(:,end + 1) = 0;
+Cocina(:, end + 1) = 1;
+Estudio(:, end + 1)= 2;
+
+Sala(Sala == Inf) = 0;
+Cocina(Cocina == Inf) = 0;
+Estudio(Estudio == Inf) = 0;
+
+dataset_completo = cat(1,Sala,Cocina);
+dataset_completo = cat(1,dataset_completo,Estudio);
+
+writematrix(dataset_completo, 'datasets\dataset_completo.csv');
+
