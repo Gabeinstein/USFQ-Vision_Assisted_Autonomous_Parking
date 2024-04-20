@@ -20,12 +20,13 @@ import os
 scripts_dir = os.path.dirname(os.path.realpath(__file__))
 scripts_dir = scripts_dir.replace('/scripts','',-1)
 path_feature_selection = os.path.join(scripts_dir, 'model/k_best_selected_features', 'selected_features.csv')
-path_nn_model = os.path.join(scripts_dir, 'model/pretrained_model', 'model_final.pth')
+path_nn_model = os.path.join(scripts_dir, 'model/pretrained_model', 'model_final_cpu.pth')
 
 #Variables
 featured_index = pd.read_csv(path_feature_selection)
 featured_index = featured_index.iloc[:].values.astype(dtype=np.int32)
 input_layer_length = len(featured_index)
+output_classes = 4
 
 #Neural Network Architecture
 class AlexNet1D(nn.Module):
@@ -99,13 +100,13 @@ def callback_laser(msg):
         x = (value - lidar_range_min)/(lidar_range_max - lidar_range_min)       #Min Max Normalization
         input_data.append(x)
     input_data = torch.tensor(input_data).view(-1, input_layer_length).to(device)
-    input_data = input_data.unsqueeze(0).unsqueeze(0)
-    rospy.loginfo(input_data)
+    input_data = input_data.unsqueeze(0)
+    #rospy.loginfo(input_data)
     take_action(input_data)
 
 #Pytorch Variables
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = nn_model_load(input_layer_length)
+model = nn_model_load(output_classes)
 model.to(device)
 
 def main():
