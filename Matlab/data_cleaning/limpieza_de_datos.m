@@ -10,7 +10,7 @@
 %%% Diagonal -> 2
 %%% Frente -> 3
 
-Retro = readmatrix("datasets\diagonal\dataset_diagonal.csv");
+Retro = readmatrix("datasets\retro\dataset_retro.csv");
 Paralelo = readmatrix("datasets\paralelo\dataset_paralelo.csv");
 Diagonal = readmatrix("datasets\diagonal\dataset_diagonal.csv");
 Frente = readmatrix("datasets\frente\dataset_frente.csv");
