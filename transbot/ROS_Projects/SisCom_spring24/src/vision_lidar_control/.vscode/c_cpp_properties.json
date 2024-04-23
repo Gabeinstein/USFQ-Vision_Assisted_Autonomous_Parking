@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/gabeinstein/catkin_ws/devel/include/**",
+        "/home/gabeinstein/ROS_Projects/SisCom_spring24/src/fileread/include/**",
+        "/home/gabeinstein/catkin_ws/src/mavros/libmavconn/include/**",
+        "/home/gabeinstein/catkin_ws/src/mavros/mavros/include/**",
+        "/home/gabeinstein/catkin_ws/src/mavros/mavros_msgs/include/**",
+        "/home/gabeinstein/ROS_Projects/SisCom_spring24/src/ml_detection/include/**",
+        "/home/gabeinstein/catkin_ws/src/mavros/test_mavros/include/**",
+        "/home/gabeinstein/ROS_Projects/SisCom_spring24/src/transbot_usfq/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
