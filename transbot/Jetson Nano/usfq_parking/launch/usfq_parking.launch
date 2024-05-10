@@ -1,0 +1,6 @@
+<launch>
+    <node name="usfq_intro" pkg="usfq_parking" type="intro.py" output="screen"></node>
+    <node name="usfq_vision_ai" pkg="usfq_parking" type="model_alexnet.py" output="screen"></node>
+    <node name="usfq_path_planning" pkg="usfq_parking" type="trajectory_planner.py" output="screen"></node>
+    <node name="usfq_keyboard" pkg="usfq_parking" type="teleop.py" output="screen"></node>
+</launch>
