@@ -1,4 +1,4 @@
-# vision_assisted_autonomous_parking
+# USFQ - Vision Assisted Autonomous Parking
 
 <center>
 
