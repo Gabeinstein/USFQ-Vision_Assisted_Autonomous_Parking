@@ -1,8 +1,14 @@
 # vision_assisted_autonomous_parking
 
-- PARKING APPLICATION
-  Proyecto Sistemas de Comunicaciones Primavera 2024 --
-  Integrantes: Gabriel Ona, Jose Montahuano y Emilia Casares
+<center>
+
+PARKING APPLICATION
+
+Proyecto Sistemas de Comunicaciones Primavera 2024
+
+Integrantes: Gabriel Ona, Jose Montahuano y Emilia Casares
+
+</center>
 
 ## Descripcion
 
