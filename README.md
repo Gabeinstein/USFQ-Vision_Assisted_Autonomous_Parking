@@ -6,7 +6,7 @@ PARKING APPLICATION
 
 Proyecto Sistemas de Comunicaciones Primavera 2024
 
-Integrantes: Gabriel Ona, Jose Montahuano y Emilia Casares
+Integrantes: Gabriel Oña, Jose Montahuano y Emilia Casares
 
 </center>
 
